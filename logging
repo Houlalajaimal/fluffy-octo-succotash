@@ -1,0 +1,31 @@
+[loggers]
+# Loggers names, main configuration slots
+keys = root
+
+[handlers]
+# Logging handlers, defining logging output methods
+keys = console
+
+[formatters]
+# Logging formatters
+keys = simple,full
+
+[logger_root]
+# Root logger
+level = DEBUG
+handlers = console
+
+[handler_console]
+# Console handler
+class = StreamHandler
+level = INFO
+args = (sys.stdout,)
+formatter = simple
+
+[formatter_simple]
+# Simple output format
+format = %(message)s
+
+[formatter_full]
+# Full output format
+format = %(asctime)s - %(levelname)s: %(message)s
