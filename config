@@ -12,9 +12,9 @@ pid =
 # SSL flag, enable HTTPS protocol
 ssl = True
 # SSL certificate path
-certificate = ~/.config/radicale/radicale.crt
+certificate = /data/radicale/radicale.crt
 # SSL private key
-key = ~/.config/radicale/radicale.key
+key = /data/radicale/radicale.key
 # Message displayed in the client when a password is needed
 realm = Radicale - Password Required
 
@@ -31,12 +31,12 @@ stock = utf-8
 # Value: None | htpasswd | IMAP | LDAP | PAM | courier | http | remote_user | custom
 type = htpasswd
 # Htpasswd filename
-htpasswd_filename = ~/.config/radicale/passwd
+htpasswd_filename = /data/radicale/passwd
 # Htpasswd encryption method
 # Value: plain | sha1 | crypt
 htpasswd_encryption = plain
-private_users = myuser
-public_users = myuser
+private_users = private
+public_users = public
 
 [rights]
 # Rights backend
@@ -54,7 +54,7 @@ type = owner_only
 type = filesystem
 
 # Folder for storing local collections, created if not present
-filesystem_folder = ~/.config/radicale/collections
+filesystem_folder = /data/radicale/collections
 
 
 [logging]
@@ -62,7 +62,7 @@ filesystem_folder = ~/.config/radicale/collections
 # If no config is given, simple information is printed on the standard output
 # For more information about the syntax of the configuration file, see:
 # http://docs.python.org/library/logging.config.html
-config = ~/.config/radicale/logging
+config = /data/radicale/logging
 # Set the default logging level to debug
 debug = False
 # Store all environment variables (including those set in the shell)
